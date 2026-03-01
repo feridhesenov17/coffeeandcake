@@ -4,70 +4,134 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coffee & Cake | Bakı</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    color: white;
+body{
+margin:0;
+font-family:Poppins, sans-serif;
+background:#0f0f0f;
+color:#fff;
 }
-header {
-    text-align: center;
-    padding: 30px 20px;
-    background-color: #000;
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#000;
+position:sticky;
+top:0;
+z-index:10;
 }
-header img {
-    max-width: 250px;
+
+header img{
+height:50px;
 }
-.hero {
-    text-align: center;
-    padding: 40px 20px;
+
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-size:15px;
+opacity:.8;
 }
-.hero h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+
+nav a:hover{opacity:1}
+
+.hero{
+height:80vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.8)),
+url('https://images.unsplash.com/photo-1509042239860-f550ce710b93');
+background-size:cover;
+background-position:center;
 }
-.hero p {
-    font-size: 18px;
-    color: #ccc;
+
+.hero h1{
+font-size:48px;
+margin:0;
 }
-.section {
-    padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
+
+.hero p{
+opacity:.8;
+margin:15px 0 25px;
 }
-.section h2 {
-    border-bottom: 2px solid #c59d5f;
-    padding-bottom: 10px;
+
+.btn{
+background:#c59d5f;
+color:#000;
+padding:14px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
 }
-.menu-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    border-bottom: 1px solid #333;
+
+.section{
+padding:70px 20px;
+max-width:1100px;
+margin:auto;
 }
-.button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background-color: #c59d5f;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
+
+.section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:32px;
 }
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000;
-    color: #aaa;
-    font-size: 14px;
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
 }
-iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-    margin-top: 20px;
+
+.menu-card{
+background:#1a1a1a;
+padding:20px;
+border-radius:10px;
+}
+
+.menu-card h3{
+margin-top:0;
+border-bottom:1px solid #333;
+padding-bottom:10px;
+}
+
+.menu-item{
+display:flex;
+justify-content:space-between;
+padding:6px 0;
+font-size:14px;
+}
+
+.contact{
+text-align:center;
+}
+
+iframe{
+width:100%;
+height:350px;
+border:0;
+border-radius:10px;
+margin-top:25px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+opacity:.7;
+font-size:14px;
+}
+
+@media(max-width:600px){
+.hero h1{font-size:32px}
+header{padding:15px 20px}
 }
 </style>
 </head>
@@ -75,43 +139,67 @@ iframe {
 <body>
 
 <header>
-    <img src="logo.png" alt="Coffee & Cake Logo">
+<img src="logo.png">
+<nav>
+<a href="#menu">Menyu</a>
+<a href="#contact">Əlaqə</a>
+<a href="https://instagram.com/coffeeandcake._" target="_blank">Instagram</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>Fresh Coffee. Sweet Moments.</h1>
-    <p>Sizin sevimli kafe məkanınız – Sabunçu, Bakı</p>
-    <a class="button" href="https://wa.me/994777117667">WhatsApp ilə Sifariş</a>
+<h1>Coffee & Cake</h1>
+<p>Premium kafe təcrübəsi – Sabunçu, Bakı</p>
+<a class="btn" href="https://wa.me/994777117667">WhatsApp ilə sifariş</a>
 </section>
 
-<section class="section">
-    <h2>Ən Çox Seçilənlər</h2>
+<section id="menu" class="section">
+<h2>Seçilmiş Menyu</h2>
 
-    <div class="menu-item"><span>Espresso</span><span>2.50 ₼</span></div>
-    <div class="menu-item"><span>Cappuccino</span><span>4.50 ₼</span></div>
-    <div class="menu-item"><span>Latte</span><span>4.60 ₼</span></div>
-    <div class="menu-item"><span>San Sebastian Çizkeyk</span><span>6.50 ₼</span></div>
-    <div class="menu-item"><span>Tiramisu</span><span>6.70 ₼</span></div>
-    <div class="menu-item"><span>Croissant Chocolate</span><span>4.00 ₼</span></div>
+<div class="menu-grid">
 
+<div class="menu-card">
+<h3>Qəhvə</h3>
+<div class="menu-item"><span>Espresso</span><span>2.50 ₼</span></div>
+<div class="menu-item"><span>Cappuccino</span><span>4.50 ₼</span></div>
+<div class="menu-item"><span>Latte</span><span>4.60 ₼</span></div>
+<div class="menu-item"><span>Flat White</span><span>5.20 ₼</span></div>
+</div>
+
+<div class="menu-card">
+<h3>Dessert</h3>
+<div class="menu-item"><span>San Sebastian</span><span>6.50 ₼</span></div>
+<div class="menu-item"><span>Tiramisu</span><span>6.70 ₼</span></div>
+<div class="menu-item"><span>Magnolia</span><span>6.70 ₼</span></div>
+<div class="menu-item"><span>Brownie</span><span>6.80 ₼</span></div>
+</div>
+
+<div class="menu-card">
+<h3>Sərin İçkilər</h3>
+<div class="menu-item"><span>Ice Latte</span><span>5.00 ₼</span></div>
+<div class="menu-item"><span>Ice Mocha</span><span>5.80 ₼</span></div>
+<div class="menu-item"><span>Limonad</span><span>6.00 ₼</span></div>
+<div class="menu-item"><span>Milkshake</span><span>6.50 ₼</span></div>
+</div>
+
+</div>
 </section>
 
-<section class="section">
-    <h2>Əlaqə</h2>
-    <p><strong>Ünvan:</strong> Coffee & Cake, Sabunçu ray., Səmədbəy Mehmandarov küç., ev 30, M4, Bakı</p>
-    <p><strong>Telefon:</strong> +994 77 711 76 67</p>
-    <p><strong>İş Saatları:</strong> Hər gün 08:00 – 23:30</p>
+<section id="contact" class="section contact">
+<h2>Əlaqə və Məkan</h2>
+<p>Sabunçu rayonu, Səmədbəy Mehmandarov küçəsi 30, Bakı</p>
+<p>Tel: +994 77 711 76 67</p>
+<p>Hər gün: 08:00 – 23:30</p>
 
-    <iframe 
-        src="https://www.google.com/maps?q=Sabunçu Səmədbəy Mehmandarov küçəsi 30 Bakı&output=embed">
-    </iframe>
+<iframe
+src="https://www.google.com/maps?q=40.419305,49.965651&output=embed">
+</iframe>
+
 </section>
 
 <footer>
-    © 2026 Coffee & Cake | Instagram: @coffeeandcake._
+© 2026 Coffee & Cake | @coffeeandcake._
 </footer>
 
 </body>
 </html>
-
-
